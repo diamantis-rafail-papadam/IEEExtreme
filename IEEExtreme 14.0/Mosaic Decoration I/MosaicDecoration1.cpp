@@ -9,12 +9,12 @@ int main() {
     cin.tie(NULL);
 
     int N, CB, CP;
-    int black = 0, pink = 0, res, bi, pi;
+    int black = 0, pink = 0, res, b, p;
     cin >> N >> CB >> CP;
     while(N--) {
-        cin >> bi >> pi;
-        black += bi;
-        pink += pi;
+        cin >> b >> p;
+        black += b;
+        pink += p;
     }
     res = ceil((double)black/10) * CB + ceil((double)pink/10) * CP;
     cout << res << endl;
