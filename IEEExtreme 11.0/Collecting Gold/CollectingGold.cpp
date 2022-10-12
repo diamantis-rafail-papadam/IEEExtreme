@@ -4,9 +4,10 @@
 typedef unsigned long long int ll;
 using namespace std;
 
+vector<ll> primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47}; //we could also use the "Sieve of Eratosthenes" to find these prime numbers but I don't believe this is the point of this particular problem.
+
 int calc_gold(ll id) {
     int gold = 0;
-    vector<ll> primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47}; //we could also use the "Sieve of Eratosthenes" to find these prime numbers but I don't believe this is the point of this particular problem.
     while(id > 0) id /= primes[gold++];
     return --gold;
 }
